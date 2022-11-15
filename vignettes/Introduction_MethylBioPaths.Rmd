@@ -1,0 +1,95 @@
+---
+title: "A tour of MethylBioPaths"
+author: "Juan De Los Rios"
+date: "`r format(Sys.time(), '%d %b %Y')`"
+output: 
+  rmarkdown::html_vignette:
+    toc: true
+    number_sections: false
+vignette: >
+  %\VignetteIndexEntry{A tour of MethylBioPaths}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+library(knitr)
+opts_chunk$set(fig.align = "center", 
+               out.width = "90%",
+               fig.width = 6, fig.height = 5.5,
+               dev.args=list(pointsize=10),
+               par = TRUE, # needed for setting hook 
+               collapse = TRUE, # collapse input & ouput code in chunks
+               warning = FALSE)
+
+knit_hooks$set(par = function(before, options, envir)
+  { if(before && options$fig.show != "none") 
+       par(family = "sans", mar=c(4.1,4.1,1.1,1.1), mgp=c(3,1,0), tcl=-0.5)
+})
+set.seed(1) # for exact reproducibility
+```
+
+## Introduction
+
+**MethylBioPaths** is an R package for analyzing DNA methylation data, specifically the biological pathways that genes involved in driving differential methylation are involved in and the relationship between mutation types and differential methylation. **This document gives a tour of MethylBiopPaths (version 0.1.0)**. It was written in R Markdown, using the [knitr](https://cran.r-project.org/package=knitr) package for production.
+
+To download **MethylBioPaths**, use the following commands:
+
+``` r
+require("devtools")
+install_github("Juan-De-Los-Rios/MethylBioPaths", build_vignettes = TRUE)
+library("MethylBioPaths")
+```
+To list all sample functions available in the package:
+``` r
+ls("package:MethylBioPaths")
+```
+To list all sample datasets available in the package:
+``` r
+data(package = "MethylBioPaths")
+```
+
+<br>
+
+## Functions
+
+**methylMutationAssociation** A function that generates a plot highlighting the relationship between mutation category and differential DNA methylation. It accepts 4 datasets as inputs: a matrix containing DNA methylation data from a diseased sample, a matrix containing DNA methylation data from a baseline sample, a matrix containing gene expression data from a diseased sample, and a list categorizing genes present in each sample based on mutations they possess.
+
+```r
+library(MethylMix)
+data(METcancer)
+data(METnormal)
+data(GEcancer)
+data(mutationExample)
+methylMutationAssociation(METcancer, METnormal, GEcancer, mutationExample)
+#Produces box plot illustrating relationship between differential methylation and mutation category
+```
+
+**methylOverrep** A function that generates a plot summarizing the findings of an overrepresentation analysis performed using the driver genes derived from DNA methylation samples. It accepts 3 datasets as inputs: a matrix containing DNA methylation data from a diseased sample, a matrix containing DNA methylation data from a baseline sample, and a matrix containing gene expression data from a diseased sample. It also accepts two integers, pValue and qValue, representing the cutoffs for how stringent you want to significance threshold of the overrepresentation analysis to be.
+
+```r
+library(MethylMix)
+data(METcancer)
+data(METnormal)
+data(GEcancer)
+resPlot <- methylOverrep(METcancer, METnormal, GEcancer, 1, 1)
+resPlot
+#Returns bar plot summarizing results of biological pathway analysis
+```
+<br>
+
+## References
+
+Carlson M (2022). org.Hs.eg.db: Genome wide annotation for Human_. R package version 3.15.0.
+
+Gevaert O (2022). MethylMix: Identifying methylation driven cancer genes. R package version 2.26.0. 
+
+R Core Team (2022). R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria. URL https://www.R-project.org/
+
+T Wu, E Hu, S Xu, M Chen, P Guo, Z Dai, T Feng, L Zhou, W Tang, L Zhan, X Fu, S Liu, X Bo, and G Yu. clusterProfiler 4.0: A universal enrichment tool for interpreting omics data. The Innovation. 2021, 2(3):100141
+
+----
+
+```{r}
+sessionInfo()
+```

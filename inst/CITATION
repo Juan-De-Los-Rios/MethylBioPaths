@@ -1,0 +1,12 @@
+citHeader("To cite MethylBioPaths in publications use:")
+
+citEntry(
+  entry    = "Unpublished",
+  title    = "MethylBioPaths: Biological Pathway Analysis of Methylation Data",
+  author   = "Juan De Los Rios",
+  note     = "Unpublished",
+  year     = "2022",
+  textVersion = paste("De Los Rios, J. (2022) MethylBioPaths: Biological Pathway Analysis of Methylation Data. Unpublished. URL https://github.com/Juan-De-Los-Rios/MethylBioPaths"
+
+  )
+)
