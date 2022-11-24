@@ -12,6 +12,7 @@ RoxygenNote: 7.2.2
 Depends:
     R (>= 3.10)
 Imports:
+    biocViews,
     MethylMix,
     clusterProfiler,
     org.Hs.eg.db
