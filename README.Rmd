@@ -28,8 +28,8 @@ To install the latest version of the package:
 
 ``` r
 require("devtools")
-devtools::install_github("Juan-De-Los-Rios/MethylBioPaths")
-library("MethylBioPaths)
+devtools::install_github("Juan-De-Los-Rios/MethylBioPaths", build_vignettes = TRUE)
+library("MethylBioPaths")
 ```
 
 ## Overview
