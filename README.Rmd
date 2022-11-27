@@ -56,6 +56,8 @@ The author of this package is Juan De Los Rios. *methylOverrep* and *methylMutat
 
 Carlson M (2022). org.Hs.eg.db: Genome wide annotation for Human. R package version 3.15.0.
 
+Chang W, Cheng J, Allaire J, Sievert C, Schloerke B, Xie Y, Allen J, McPherson J, Dipert A, Borges B (2022). _shiny: Web Application Framework for R_. R package version 1.7.3, <https://CRAN.R-project.org/package=shiny>.
+
 Gevaert O (2022). MethylMix: Identifying methylation driven cancer genes. R package version 2.26.0.
 
 T Wu, E Hu, S Xu, M Chen, P Guo, Z Dai, T Feng, L Zhou, W Tang, L Zhan, X Fu, S Liu, X Bo, and G Yu. clusterProfiler 4.0: A universal enrichment tool for interpreting omics data. The Innovation. 2021, 2(3):100141

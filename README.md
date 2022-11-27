@@ -60,6 +60,11 @@ function from the clusterProfiler package.
 Carlson M (2022). org.Hs.eg.db: Genome wide annotation for Human. R
 package version 3.15.0.
 
+Chang W, Cheng J, Allaire J, Sievert C, Schloerke B, Xie Y, Allen J,
+McPherson J, Dipert A, Borges B (2022). *shiny: Web Application
+Framework for R*. R package version 1.7.3,
+<https://CRAN.R-project.org/package=shiny>.
+
 Gevaert O (2022). MethylMix: Identifying methylation driven cancer
 genes. R package version 2.26.0.
 
