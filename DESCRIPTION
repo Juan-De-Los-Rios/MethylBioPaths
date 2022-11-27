@@ -15,7 +15,8 @@ Imports:
     biocViews,
     MethylMix,
     clusterProfiler,
-    org.Hs.eg.db
+    org.Hs.eg.db,
+    shiny
 Suggests: 
     knitr,
     rmarkdown,
