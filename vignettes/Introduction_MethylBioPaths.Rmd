@@ -82,6 +82,8 @@ resPlot
 
 Carlson M (2022). org.Hs.eg.db: Genome wide annotation for Human_. R package version 3.15.0.
 
+Chang W, Cheng J, Allaire J, Sievert C, Schloerke B, Xie Y, Allen J, McPherson J, Dipert A, Borges B (2022). _shiny: Web Application Framework for R_. R package version 1.7.3, <https://CRAN.R-project.org/package=shiny>.
+
 Gevaert O (2022). MethylMix: Identifying methylation driven cancer genes. R package version 2.26.0. 
 
 R Core Team (2022). R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria. URL https://www.R-project.org/
