@@ -50,8 +50,8 @@
 methylOverrep <- function(methylationCancer,
                           methylationNormal,
                           geneCancer,
-                          pValue,
-                          qValue) {
+                          pValue = 0.05,
+                          qValue = 0.1) {
 
   if (dim(geneCancer)[1] * dim(geneCancer)[2] == 0 ||
       dim(methylationCancer)[1] * dim(methylationCancer)[2] == 0 ||
