@@ -59,6 +59,10 @@ methylOverrep <- function(methylationCancer,
     stop("Inputs containing methylation and gene samples must not be empty")
   }
 
+  if (pValue > 1 | pValue < 0 | qValue > 1 | qValue < 0) {
+    stop("pValue and qValue must bet a decimal value between 0 and 1")
+  }
+
   # Determining driver genes for methylation in input samples
   methylMixRes <- MethylMix::MethylMix(METcancer = methylationCancer,
                                        METnormal = methylationNormal,
