@@ -135,29 +135,25 @@ server <- function(input, output, session) {
   })
 
   url1 <- a("Example Dataset 1",
-            href="https://raw.githubusercontent.com/Juan-De-Los-Rios/
-            MethylBioPaths/master/inst/extdata/METcancer.rds")
+            href="https://raw.githubusercontent.com/Juan-De-Los-Rios/MethylBioPaths/master/inst/extdata/METcancer.rds")
   output$tab1 <- renderUI({
     tagList("Download:", url1)
   })
 
   url2 <- a("Example Dataset 2",
-            href="https://raw.githubusercontent.com/Juan-De-Los-Rios/
-            MethylBioPaths/master/inst/extdata/METnormal.rds")
+            href="https://raw.githubusercontent.com/Juan-De-Los-Rios/MethylBioPaths/master/inst/extdata/METnormal.rds")
   output$tab2 <- renderUI({
     tagList("Download:", url2)
   })
 
   url3 <- a("Example Dataset 3",
-            href="https://raw.githubusercontent.com/Juan-De-Los-Rios/
-            MethylBioPaths/master/inst/extdata/GEcancer.rds")
+            href="https://raw.githubusercontent.com/Juan-De-Los-Rios/MethylBioPaths/master/inst/extdata/GEcancer.rds")
   output$tab3 <- renderUI({
     tagList("Download:", url3)
   })
 
   url4 <- a("Example Dataset 4",
-            href="https://raw.githubusercontent.com/Juan-De-Los-Rios/
-            MethylBioPaths/master/inst/extdata/mutationExample.rds")
+            href="https://raw.githubusercontent.com/Juan-De-Los-Rios/MethylBioPaths/master/inst/extdata/mutationExample.rds")
   output$tab4 <- renderUI({
     tagList("Download:", url4)
   })
