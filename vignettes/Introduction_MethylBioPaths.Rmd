@@ -53,7 +53,7 @@ data(package = "MethylBioPaths")
 
 ## Functions
 
-**methylMutationAssociation** A function that generates a plot highlighting the relationship between mutation category and differential DNA methylation. It accepts 4 datasets as inputs: a matrix containing DNA methylation data from a diseased sample, a matrix containing DNA methylation data from a baseline sample, a matrix containing gene expression data from a diseased sample, and a list categorizing genes present in each sample based on mutations they possess.
+MethylBioPaths contains two functions for analyzing DNA methylation data. This tutorial will guide you through how to use these functions and how to interpret their results. The tutorial will assume you will be using the following example datasets to test this package's functions.
 
 ```r
 library(MethylMix)
@@ -61,21 +61,27 @@ data(METcancer)
 data(METnormal)
 data(GEcancer)
 data(mutationExample)
+```
+
+**methylMutationAssociation** A function that generates a plot highlighting the relationship between mutation category and differential DNA methylation. It accepts 4 datasets as inputs: a matrix containing DNA methylation data from a diseased sample, a matrix containing DNA methylation data from a baseline sample, a matrix containing gene expression data from a diseased sample, and a list categorizing genes present in each sample based on mutations they possess.
+
+```r
 methylMutationAssociation(METcancer, METnormal, GEcancer, mutationExample)
 #Produces box plot illustrating relationship between differential methylation and mutation category
 ```
 
+The resulting boxplot demonstrates the range of differential methylation values each mutation category encompasses through the driver genes belonging to each category, thus visualizing the ultimate impact each type of mutation has on DNA methylation in the disease of interest.
+
 **methylOverrep** A function that generates a plot summarizing the findings of an overrepresentation analysis performed using the driver genes derived from DNA methylation samples. It accepts 3 datasets as inputs: a matrix containing DNA methylation data from a diseased sample, a matrix containing DNA methylation data from a baseline sample, and a matrix containing gene expression data from a diseased sample. It also accepts two integers, pValue and qValue, representing the cutoffs for how stringent you want to significance threshold of the overrepresentation analysis to be.
 
 ```r
-library(MethylMix)
-data(METcancer)
-data(METnormal)
-data(GEcancer)
 resPlot <- methylOverrep(METcancer, METnormal, GEcancer, 1, 1)
 resPlot
 #Returns bar plot summarizing results of biological pathway analysis
 ```
+
+The resulting barplot summarizes the results of an overrepresentation analysis of the genes driving the differential methylation in the input samples. Each bar corresponds to a category of biological process and the plot as a whole presents the ten most enriched categories as well as a comparison of the number of genes that belonged to each categroy.
+
 <br>
 
 ## References
