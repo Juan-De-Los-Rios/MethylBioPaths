@@ -4,7 +4,13 @@
 \alias{methylOverrep}
 \title{Differential DNA Methylation Overrepresentation Analysis}
 \usage{
-methylOverrep(methylationCancer, methylationNormal, geneCancer, pValue, qValue)
+methylOverrep(
+  methylationCancer,
+  methylationNormal,
+  geneCancer,
+  pValue = 0.05,
+  qValue = 0.1
+)
 }
 \arguments{
 \item{methylationCancer}{Matrix containing the methylation data
